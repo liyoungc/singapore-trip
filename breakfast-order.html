@@ -178,11 +178,6 @@
             font-size: 0.85em;
             color: #666;
         }
-        .menu-item .item-price {
-            font-weight: 600;
-            color: #f5576c;
-            margin-left: 10px;
-        }
         .menu-item .item-tag {
             display: inline-block;
             background: #fff3cd;
@@ -266,31 +261,20 @@
             padding: 12px;
         }
         .summary-item {
-            display: flex;
-            justify-content: space-between;
             padding: 5px 0;
             border-bottom: 1px solid #f0f0f0;
         }
         .summary-item:last-child {
             border-bottom: none;
         }
-        .summary-total {
-            display: flex;
-            justify-content: space-between;
-            font-size: 1.2em;
-            font-weight: 700;
-            padding-top: 15px;
-            border-top: 2px solid #f5576c;
-            margin-top: 15px;
-        }
-        .summary-total .price {
-            color: #f5576c;
-        }
         .summary-note {
-            font-size: 0.8em;
-            color: #666;
+            font-size: 0.9em;
+            color: #4caf50;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 15px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 8px;
         }
 
         /* 複製區域 */
@@ -418,40 +402,36 @@
 
         <div class="menu-options" data-category="starters">
             <label class="menu-item">
-                <input type="checkbox" value="Fresh Pastries 新鮮糕點" data-price="18">
+                <input type="checkbox" value="Fresh Pastries 新鮮糕點">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Fresh Pastries 新鮮糕點</div>
                     <div class="item-desc">酥脆可頌、巧克力麵包，配奶油、果醬</div>
                 </div>
-                <div class="item-price">$18</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Congee 粥品" data-price="18">
+                <input type="checkbox" value="Congee 粥品">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Congee 粥品 <span class="item-tag">阿嬤推薦</span></div>
                     <div class="item-desc">鹹香米粥，低卡低脂，營養豐富</div>
                 </div>
-                <div class="item-price">$18</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Cereal 麥片" data-price="20">
+                <input type="checkbox" value="Cereal 麥片">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Cereal 麥片</div>
                     <div class="item-desc">玉米片或小麥片，配全脂牛奶或燕麥奶</div>
                 </div>
-                <div class="item-price">$20</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Seasonal Fresh Fruit 季節水果" data-price="20">
+                <input type="checkbox" value="Seasonal Fresh Fruit 季節水果">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Seasonal Fresh Fruit 季節水果</div>
                     <div class="item-desc">手工採摘時令鮮果，天然風味</div>
                 </div>
-                <div class="item-price">$20</div>
             </label>
         </div>
 
@@ -470,67 +450,60 @@
 
         <div class="menu-options" data-category="mains">
             <label class="menu-item">
-                <input type="checkbox" value="Fluffy Buttermilk Pancakes 鬆餅" data-price="26">
+                <input type="checkbox" value="Fluffy Buttermilk Pancakes 鬆餅">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Fluffy Buttermilk Pancakes <span class="item-tag">小孩最愛</span></div>
                     <div class="item-desc">鬆軟奶油鬆餅，配鮮奶油和楓糖漿</div>
                 </div>
-                <div class="item-price">$26</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Two Eggs 雙蛋" data-price="20">
+                <input type="checkbox" value="Two Eggs 雙蛋">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Two Eggs 雙蛋</div>
                     <div class="item-desc">煎蛋/水波蛋/炒蛋/蛋捲，配酸種吐司</div>
                 </div>
-                <div class="item-price">$20</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Masala Omelette 印度香料蛋捲" data-price="20">
+                <input type="checkbox" value="Masala Omelette 印度香料蛋捲">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Masala Omelette 印度香料蛋捲</div>
                     <div class="item-desc">印度香料風味蛋捲，配酸種吐司</div>
                 </div>
-                <div class="item-price">$20</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Aloo Paratha 印度馬鈴薯餅" data-price="26">
+                <input type="checkbox" value="Aloo Paratha 印度馬鈴薯餅">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Aloo Paratha 印度馬鈴薯餅 <span class="item-tag">在地特色</span></div>
                     <div class="item-desc">香料馬鈴薯全麥煎餅，配醃菜和優格</div>
                 </div>
-                <div class="item-price">$26</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Steamed Idli 印度蒸米糕" data-price="20">
+                <input type="checkbox" value="Steamed Idli 印度蒸米糕">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Steamed Idli 印度蒸米糕</div>
                     <div class="item-desc">米和扁豆蒸糕，配燉扁豆和椰子酸辣醬</div>
                 </div>
-                <div class="item-price">$20</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Upma 印度粗麥粥" data-price="20">
+                <input type="checkbox" value="Upma 印度粗麥粥">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Upma 印度粗麥粥</div>
                     <div class="item-desc">粗麥粉配香料、扁豆和咖哩葉</div>
                 </div>
-                <div class="item-price">$20</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Mee Goreng 印度炒麵" data-price="26">
+                <input type="checkbox" value="Mee Goreng 印度炒麵">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Mee Goreng 印度炒麵 <span class="item-tag">新加坡經典</span></div>
                     <div class="item-desc">炒黃麵配炒蛋</div>
                 </div>
-                <div class="item-price">$26</div>
             </label>
         </div>
 
@@ -549,40 +522,36 @@
 
         <div class="menu-options" data-category="sides">
             <label class="menu-item">
-                <input type="checkbox" value="Grilled Tomato 烤番茄" data-price="10">
+                <input type="checkbox" value="Grilled Tomato 烤番茄">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Grilled Tomato 烤番茄</div>
                     <div class="item-desc">香烤番茄</div>
                 </div>
-                <div class="item-price">$10</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Potato Hashbrown 薯餅" data-price="10">
+                <input type="checkbox" value="Potato Hashbrown 薯餅">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Potato Hashbrown 薯餅</div>
                     <div class="item-desc">金黃酥脆薯餅</div>
                 </div>
-                <div class="item-price">$10</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Smoked Bacon 煙燻培根" data-price="15">
+                <input type="checkbox" value="Smoked Bacon 煙燻培根">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Smoked Bacon 煙燻培根</div>
                     <div class="item-desc">香煎煙燻培根</div>
                 </div>
-                <div class="item-price">$15</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Chicken Sausage 雞肉香腸" data-price="15">
+                <input type="checkbox" value="Chicken Sausage 雞肉香腸">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Chicken Sausage 雞肉香腸</div>
                     <div class="item-desc">多汁雞肉香腸</div>
                 </div>
-                <div class="item-price">$15</div>
             </label>
         </div>
 
@@ -601,49 +570,44 @@
 
         <div class="menu-options" data-category="drinks">
             <label class="menu-item">
-                <input type="checkbox" value="果汁（鳳梨/芒果/蘋果）" data-price="14">
+                <input type="checkbox" value="果汁（鳳梨/芒果/蘋果）">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Selection of Juices 果汁</div>
                     <div class="item-desc">鳳梨、芒果或蘋果</div>
                 </div>
-                <div class="item-price">$14</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Espresso 濃縮咖啡" data-price="10">
+                <input type="checkbox" value="Espresso 濃縮咖啡">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Espresso 濃縮咖啡</div>
                     <div class="item-desc">單份濃縮咖啡</div>
                 </div>
-                <div class="item-price">$10</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Latte 拿鐵" data-price="14">
+                <input type="checkbox" value="Latte 拿鐵">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Latte / Cappuccino / Flat White</div>
                     <div class="item-desc">可選冰/熱，可選全脂、脫脂或燕麥奶</div>
                 </div>
-                <div class="item-price">$14</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Masala Chai 印度香料奶茶" data-price="14">
+                <input type="checkbox" value="Masala Chai 印度香料奶茶">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Masala Chai 印度香料奶茶 <span class="item-tag">在地特色</span></div>
                     <div class="item-desc">豆蔻薑味大吉嶺茶配牛奶</div>
                 </div>
-                <div class="item-price">$14</div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Selection of Tea 精選茶" data-price="14">
+                <input type="checkbox" value="Selection of Tea 精選茶">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Selection of Tea 精選茶</div>
                     <div class="item-desc">英式早餐茶/伯爵茶/茉莉綠茶/洋甘菊/煎茶</div>
                 </div>
-                <div class="item-price">$14</div>
             </label>
         </div>
 
@@ -685,11 +649,7 @@
                 <div class="summary-items"></div>
             </div>
 
-            <div class="summary-total">
-                <span>總計</span>
-                <span class="price" id="summary-total">$0</span>
-            </div>
-            <p class="summary-note">* 需另加 10% 服務費及政府稅</p>
+            <p class="summary-note">✨ 飯店早餐已含在住宿中，不需額外付費！</p>
         </div>
 
         <div class="copy-area">
@@ -777,12 +737,11 @@ menuItems.forEach(item => {
         // 更新訂單
         const category = item.closest('.menu-options').dataset.category;
         const value = checkbox.value;
-        const price = parseInt(checkbox.dataset.price);
 
         if (checkbox.checked) {
-            order[category].push({ name: value, price: price });
+            order[category].push(value);
         } else {
-            order[category] = order[category].filter(i => i.name !== value);
+            order[category] = order[category].filter(i => i !== value);
         }
     });
 });
@@ -813,14 +772,7 @@ function generateSummary() {
     document.getElementById('summary-emoji').textContent = order.emoji;
     document.getElementById('summary-name').textContent = order.identity + ' 的早餐';
 
-    let total = 0;
     const categories = ['starters', 'mains', 'sides', 'drinks'];
-    const categoryNames = {
-        starters: '開胃',
-        mains: '主餐',
-        sides: '配菜',
-        drinks: '飲料'
-    };
 
     categories.forEach(cat => {
         const section = document.getElementById(`summary-${cat}`);
@@ -830,18 +782,15 @@ function generateSummary() {
         if (order[cat].length > 0) {
             section.style.display = 'block';
             order[cat].forEach(item => {
-                total += item.price;
                 const div = document.createElement('div');
                 div.className = 'summary-item';
-                div.innerHTML = `<span>${item.name}</span><span>$${item.price}</span>`;
+                div.textContent = `• ${item}`;
                 itemsContainer.appendChild(div);
             });
         } else {
             section.style.display = 'none';
         }
     });
-
-    document.getElementById('summary-total').textContent = `$${total}`;
 
     // 生成複製文字
     let copyText = `🍳 ${order.identity}的早餐訂單\n`;
@@ -851,34 +800,33 @@ function generateSummary() {
     if (order.starters.length > 0) {
         copyText += `\n🥐 開胃：\n`;
         order.starters.forEach(item => {
-            copyText += `   • ${item.name}\n`;
+            copyText += `   • ${item}\n`;
         });
     }
 
     if (order.mains.length > 0) {
         copyText += `\n🍳 主餐：\n`;
         order.mains.forEach(item => {
-            copyText += `   • ${item.name}\n`;
+            copyText += `   • ${item}\n`;
         });
     }
 
     if (order.sides.length > 0) {
         copyText += `\n🥓 配菜：\n`;
         order.sides.forEach(item => {
-            copyText += `   • ${item.name}\n`;
+            copyText += `   • ${item}\n`;
         });
     }
 
     if (order.drinks.length > 0) {
         copyText += `\n🥤 飲料：\n`;
         order.drinks.forEach(item => {
-            copyText += `   • ${item.name}\n`;
+            copyText += `   • ${item}\n`;
         });
     }
 
     copyText += `\n────────────────\n`;
-    copyText += `💰 總計：$${total}\n`;
-    copyText += `（另加 10% 服務費及政府稅）`;
+    copyText += `✨ 飯店早餐，開心享用！`;
 
     document.getElementById('copy-text').textContent = copyText;
 }
