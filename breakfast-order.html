@@ -446,11 +446,11 @@
     <!-- Step 3: 主餐 Mains -->
     <div class="step" data-step="3">
         <h2 class="step-title">🍳 主餐 Mains</h2>
-        <p class="step-subtitle">選擇你的主餐</p>
+        <p class="step-subtitle">選擇你的主餐（單選）</p>
 
-        <div class="menu-options" data-category="mains">
+        <div class="menu-options" data-category="mains" data-single="true">
             <label class="menu-item">
-                <input type="checkbox" value="Fluffy Buttermilk Pancakes 鬆餅">
+                <input type="radio" name="mains" value="Fluffy Buttermilk Pancakes 鬆餅">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Fluffy Buttermilk Pancakes <span class="item-tag">小孩最愛</span></div>
@@ -458,15 +458,39 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Two Eggs 雙蛋">
+                <input type="radio" name="mains" value="Two Eggs 煎蛋">
                 <div class="checkbox"></div>
                 <div class="item-info">
-                    <div class="item-name">Two Eggs 雙蛋</div>
-                    <div class="item-desc">煎蛋/水波蛋/炒蛋/蛋捲，配酸種吐司</div>
+                    <div class="item-name">Two Eggs 煎蛋 Fried</div>
+                    <div class="item-desc">雙蛋煎蛋，配酸種吐司</div>
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Masala Omelette 印度香料蛋捲">
+                <input type="radio" name="mains" value="Two Eggs 水波蛋">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">Two Eggs 水波蛋 Poached</div>
+                    <div class="item-desc">雙蛋水波蛋，配酸種吐司</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="mains" value="Two Eggs 炒蛋">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">Two Eggs 炒蛋 Scrambled</div>
+                    <div class="item-desc">雙蛋炒蛋，配酸種吐司</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="mains" value="Two Eggs 蛋捲">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">Two Eggs 蛋捲 Omelette</div>
+                    <div class="item-desc">雙蛋蛋捲，配酸種吐司</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="mains" value="Masala Omelette 印度香料蛋捲">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Masala Omelette 印度香料蛋捲</div>
@@ -474,7 +498,7 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Aloo Paratha 印度馬鈴薯餅">
+                <input type="radio" name="mains" value="Aloo Paratha 印度馬鈴薯餅">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Aloo Paratha 印度馬鈴薯餅 <span class="item-tag">在地特色</span></div>
@@ -482,7 +506,7 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Steamed Idli 印度蒸米糕">
+                <input type="radio" name="mains" value="Steamed Idli 印度蒸米糕">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Steamed Idli 印度蒸米糕</div>
@@ -490,7 +514,7 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Upma 印度粗麥粥">
+                <input type="radio" name="mains" value="Upma 印度粗麥粥">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Upma 印度粗麥粥</div>
@@ -498,7 +522,7 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Mee Goreng 印度炒麵">
+                <input type="radio" name="mains" value="Mee Goreng 印度炒麵">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Mee Goreng 印度炒麵 <span class="item-tag">新加坡經典</span></div>
@@ -729,20 +753,31 @@ document.getElementById('btn-step1').addEventListener('click', () => {
 
 // 菜單項目選擇
 menuItems.forEach(item => {
-    const checkbox = item.querySelector('input[type="checkbox"]');
+    const input = item.querySelector('input');
+    const isRadio = input.type === 'radio';
 
     // 使用 change 事件避免重複觸發
-    checkbox.addEventListener('change', () => {
-        item.classList.toggle('selected', checkbox.checked);
+    input.addEventListener('change', () => {
+        const menuOptions = item.closest('.menu-options');
+        const category = menuOptions.dataset.category;
+        const value = input.value;
 
-        // 更新訂單
-        const category = item.closest('.menu-options').dataset.category;
-        const value = checkbox.value;
-
-        if (checkbox.checked) {
-            order[category].push(value);
+        if (isRadio) {
+            // 單選：清除同組其他選項的 selected 狀態
+            menuOptions.querySelectorAll('.menu-item').forEach(mi => {
+                mi.classList.remove('selected');
+            });
+            item.classList.add('selected');
+            // 單選只存一個值
+            order[category] = [value];
         } else {
-            order[category] = order[category].filter(i => i !== value);
+            // 多選
+            item.classList.toggle('selected', input.checked);
+            if (input.checked) {
+                order[category].push(value);
+            } else {
+                order[category] = order[category].filter(i => i !== value);
+            }
         }
     });
 });
