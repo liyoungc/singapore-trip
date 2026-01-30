@@ -29,14 +29,8 @@
             padding: 25px;
             text-align: center;
         }
-        .header h1 {
-            font-size: 1.5em;
-            margin-bottom: 5px;
-        }
-        .header p {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
+        .header h1 { font-size: 1.5em; margin-bottom: 5px; }
+        .header p { font-size: 0.9em; opacity: 0.9; }
         .progress-bar {
             display: flex;
             justify-content: center;
@@ -51,44 +45,17 @@
             background: #ddd;
             transition: all 0.3s ease;
         }
-        .progress-dot.active {
-            background: #f5576c;
-            transform: scale(1.2);
-        }
-        .progress-dot.completed {
-            background: #4caf50;
-        }
-        .step {
-            display: none;
-            padding: 30px;
-            animation: fadeIn 0.3s ease;
-        }
-        .step.active {
-            display: block;
-        }
+        .progress-dot.active { background: #f5576c; transform: scale(1.2); }
+        .progress-dot.completed { background: #4caf50; }
+        .step { display: none; padding: 30px; animation: fadeIn 0.3s ease; }
+        .step.active { display: block; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .step-title {
-            font-size: 1.3em;
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .step-subtitle {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        /* 身分選擇按鈕 */
-        .identity-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
+        .step-title { font-size: 1.3em; color: #333; margin-bottom: 20px; text-align: center; }
+        .step-subtitle { font-size: 0.9em; color: #666; margin-bottom: 25px; text-align: center; }
+        .identity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
         .identity-btn {
             padding: 25px 15px;
             border: 3px solid #e0e0e0;
@@ -107,23 +74,9 @@
             border-color: #f5576c;
             background: linear-gradient(135deg, #fff5f7 0%, #fff 100%);
         }
-        .identity-btn .emoji {
-            font-size: 2.5em;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .identity-btn .name {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #333;
-        }
-
-        /* 菜單選項 */
-        .menu-options {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+        .identity-btn .emoji { font-size: 2.5em; display: block; margin-bottom: 10px; }
+        .identity-btn .name { font-size: 1.1em; font-weight: 600; color: #333; }
+        .menu-options { display: flex; flex-direction: column; gap: 12px; }
         .menu-item {
             display: flex;
             align-items: center;
@@ -134,17 +87,12 @@
             transition: all 0.2s ease;
             background: white;
         }
-        .menu-item:hover {
-            border-color: #f5576c;
-            background: #fff5f7;
-        }
+        .menu-item:hover { border-color: #f5576c; background: #fff5f7; }
         .menu-item.selected {
             border-color: #f5576c;
             background: linear-gradient(135deg, #fff5f7 0%, #fff 100%);
         }
-        .menu-item input {
-            display: none;
-        }
+        .menu-item input { display: none; }
         .menu-item .checkbox {
             width: 24px;
             height: 24px;
@@ -157,27 +105,11 @@
             transition: all 0.2s ease;
             flex-shrink: 0;
         }
-        .menu-item.selected .checkbox {
-            background: #f5576c;
-            border-color: #f5576c;
-        }
-        .menu-item.selected .checkbox::after {
-            content: '✓';
-            color: white;
-            font-weight: bold;
-        }
-        .menu-item .item-info {
-            flex: 1;
-        }
-        .menu-item .item-name {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 3px;
-        }
-        .menu-item .item-desc {
-            font-size: 0.85em;
-            color: #666;
-        }
+        .menu-item.selected .checkbox { background: #f5576c; border-color: #f5576c; }
+        .menu-item.selected .checkbox::after { content: '✓'; color: white; font-weight: bold; }
+        .menu-item .item-info { flex: 1; }
+        .menu-item .item-name { font-weight: 600; color: #333; margin-bottom: 3px; }
+        .menu-item .item-desc { font-size: 0.85em; color: #666; }
         .menu-item .item-tag {
             display: inline-block;
             background: #fff3cd;
@@ -187,13 +119,7 @@
             border-radius: 4px;
             margin-left: 8px;
         }
-
-        /* 按鈕 */
-        .btn-group {
-            display: flex;
-            gap: 10px;
-            margin-top: 30px;
-        }
+        .btn-group { display: flex; gap: 10px; margin-top: 30px; }
         .btn {
             flex: 1;
             padding: 15px 25px;
@@ -204,69 +130,20 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        .btn-back {
-            background: #f0f0f0;
-            color: #666;
-        }
-        .btn-back:hover {
-            background: #e0e0e0;
-        }
-        .btn-next {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-        }
-        .btn-next:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
-        }
-        .btn-next:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-
-        /* 確認頁面 */
-        .summary-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .summary-identity {
-            text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px dashed #ddd;
-        }
-        .summary-identity .emoji {
-            font-size: 3em;
-        }
-        .summary-identity .name {
-            font-size: 1.3em;
-            font-weight: 700;
-            color: #333;
-        }
-        .summary-section {
-            margin-bottom: 15px;
-        }
-        .summary-section h4 {
-            color: #f5576c;
-            font-size: 0.9em;
-            margin-bottom: 8px;
-        }
-        .summary-items {
-            background: white;
-            border-radius: 10px;
-            padding: 12px;
-        }
-        .summary-item {
-            padding: 5px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .summary-item:last-child {
-            border-bottom: none;
-        }
+        .btn-back { background: #f0f0f0; color: #666; }
+        .btn-back:hover { background: #e0e0e0; }
+        .btn-next { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+        .btn-next:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4); }
+        .btn-next:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+        .summary-card { background: #f8f9fa; border-radius: 15px; padding: 20px; margin-bottom: 20px; }
+        .summary-identity { text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px dashed #ddd; }
+        .summary-identity .emoji { font-size: 3em; }
+        .summary-identity .name { font-size: 1.3em; font-weight: 700; color: #333; }
+        .summary-section { margin-bottom: 15px; }
+        .summary-section h4 { color: #f5576c; font-size: 0.9em; margin-bottom: 8px; }
+        .summary-items { background: white; border-radius: 10px; padding: 12px; }
+        .summary-item { padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
+        .summary-item:last-child { border-bottom: none; }
         .summary-note {
             font-size: 0.9em;
             color: #4caf50;
@@ -276,11 +153,7 @@
             background: #e8f5e9;
             border-radius: 8px;
         }
-
-        /* 複製區域 */
-        .copy-area {
-            margin-top: 20px;
-        }
+        .copy-area { margin-top: 20px; }
         .copy-text {
             background: #f0f0f0;
             border-radius: 10px;
@@ -291,58 +164,14 @@
             overflow-y: auto;
             margin-bottom: 15px;
         }
-        .btn-copy {
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .btn-copy.copied {
-            background: #4caf50;
-        }
-
-        /* 完成頁面 */
-        .success-icon {
-            font-size: 4em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .success-message {
-            text-align: center;
-            font-size: 1.2em;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .btn-restart {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        /* 返回連結 */
-        .back-link {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        .back-link a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-        .back-link a:hover {
-            color: #f5576c;
-        }
-
-        /* 跳過按鈕 */
-        .skip-btn {
-            display: block;
-            text-align: center;
-            color: #999;
-            font-size: 0.85em;
-            margin-top: 15px;
-            cursor: pointer;
-        }
-        .skip-btn:hover {
-            color: #666;
-        }
+        .btn-copy { width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .btn-copy.copied { background: #4caf50; }
+        .btn-restart { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .back-link { text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; }
+        .back-link a { color: #666; text-decoration: none; font-size: 0.9em; }
+        .back-link a:hover { color: #f5576c; }
+        .skip-btn { display: block; text-align: center; color: #999; font-size: 0.85em; margin-top: 15px; cursor: pointer; }
+        .skip-btn:hover { color: #666; }
     </style>
 </head>
 <body>
@@ -360,13 +189,13 @@
         <div class="progress-dot" data-step="4"></div>
         <div class="progress-dot" data-step="5"></div>
         <div class="progress-dot" data-step="6"></div>
+        <div class="progress-dot" data-step="7"></div>
     </div>
 
     <!-- Step 1: 選擇身分 -->
     <div class="step active" data-step="1">
         <h2 class="step-title">你是誰？</h2>
         <p class="step-subtitle">請選擇你的身分</p>
-
         <div class="identity-grid">
             <div class="identity-btn" data-identity="爸爸" data-emoji="👨">
                 <span class="emoji">👨</span>
@@ -389,7 +218,6 @@
                 <span class="name">弟弟</span>
             </div>
         </div>
-
         <div class="btn-group">
             <button class="btn btn-next" id="btn-step1" disabled>下一步 →</button>
         </div>
@@ -398,8 +226,7 @@
     <!-- Step 2: 開胃 Starters -->
     <div class="step" data-step="2">
         <h2 class="step-title">🥐 開胃 Starters</h2>
-        <p class="step-subtitle">選擇你想要的開胃品</p>
-
+        <p class="step-subtitle">選擇你想要的開胃品（可多選）</p>
         <div class="menu-options" data-category="starters">
             <label class="menu-item">
                 <input type="checkbox" value="Fresh Pastries 新鮮糕點">
@@ -434,21 +261,18 @@
                 </div>
             </label>
         </div>
-
         <span class="skip-btn" data-skip="2">跳過此類別</span>
-
         <div class="btn-group">
             <button class="btn btn-back" data-back="1">← 上一步</button>
             <button class="btn btn-next" data-next="3">下一步 →</button>
         </div>
     </div>
 
-    <!-- Step 3: 主餐 Mains -->
+    <!-- Step 3: 主餐 Mains（單選，自動跳頁） -->
     <div class="step" data-step="3">
         <h2 class="step-title">🍳 主餐 Mains</h2>
-        <p class="step-subtitle">選擇你的主餐（單選）</p>
-
-        <div class="menu-options" data-category="mains" data-single="true">
+        <p class="step-subtitle">選擇你的主餐（點擊即選擇）</p>
+        <div class="menu-options" data-category="mains" data-single="true" data-next-step="4">
             <label class="menu-item">
                 <input type="radio" name="mains" value="Fluffy Buttermilk Pancakes 鬆餅">
                 <div class="checkbox"></div>
@@ -458,7 +282,7 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="radio" name="mains" value="Two Eggs 煎蛋">
+                <input type="radio" name="mains" value="Two Eggs 煎蛋 Fried">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Two Eggs 煎蛋 Fried</div>
@@ -466,7 +290,7 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="radio" name="mains" value="Two Eggs 水波蛋">
+                <input type="radio" name="mains" value="Two Eggs 水波蛋 Poached">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Two Eggs 水波蛋 Poached</div>
@@ -474,7 +298,7 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="radio" name="mains" value="Two Eggs 炒蛋">
+                <input type="radio" name="mains" value="Two Eggs 炒蛋 Scrambled">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Two Eggs 炒蛋 Scrambled</div>
@@ -482,7 +306,7 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="radio" name="mains" value="Two Eggs 蛋捲">
+                <input type="radio" name="mains" value="Two Eggs 蛋捲 Omelette">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Two Eggs 蛋捲 Omelette</div>
@@ -530,12 +354,9 @@
                 </div>
             </label>
         </div>
-
         <span class="skip-btn" data-skip="3">跳過此類別</span>
-
         <div class="btn-group">
             <button class="btn btn-back" data-back="2">← 上一步</button>
-            <button class="btn btn-next" data-next="4">下一步 →</button>
         </div>
     </div>
 
@@ -543,7 +364,6 @@
     <div class="step" data-step="4">
         <h2 class="step-title">🥓 配菜 Sides</h2>
         <p class="step-subtitle">選擇想要的配菜（可多選）</p>
-
         <div class="menu-options" data-category="sides">
             <label class="menu-item">
                 <input type="checkbox" value="Grilled Tomato 烤番茄">
@@ -578,31 +398,56 @@
                 </div>
             </label>
         </div>
-
         <span class="skip-btn" data-skip="4">跳過此類別</span>
-
         <div class="btn-group">
             <button class="btn btn-back" data-back="3">← 上一步</button>
             <button class="btn btn-next" data-next="5">下一步 →</button>
         </div>
     </div>
 
-    <!-- Step 5: 飲料 Drinks -->
+    <!-- Step 5: 果汁（單選，自動跳頁） -->
     <div class="step" data-step="5">
-        <h2 class="step-title">🥤 飲料 Drinks</h2>
-        <p class="step-subtitle">選擇你的飲料</p>
-
-        <div class="menu-options" data-category="drinks">
+        <h2 class="step-title">🧃 果汁 Juice</h2>
+        <p class="step-subtitle">選擇你的果汁（點擊即選擇）</p>
+        <div class="menu-options" data-category="juice" data-single="true" data-next-step="6">
             <label class="menu-item">
-                <input type="checkbox" value="果汁（鳳梨/芒果/蘋果）">
+                <input type="radio" name="juice" value="鳳梨汁 Pineapple Juice">
                 <div class="checkbox"></div>
                 <div class="item-info">
-                    <div class="item-name">Selection of Juices 果汁</div>
-                    <div class="item-desc">鳳梨、芒果或蘋果</div>
+                    <div class="item-name">鳳梨汁 Pineapple Juice</div>
+                    <div class="item-desc">新鮮鳳梨汁</div>
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Espresso 濃縮咖啡">
+                <input type="radio" name="juice" value="芒果汁 Mango Juice">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">芒果汁 Mango Juice</div>
+                    <div class="item-desc">香甜芒果汁</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="juice" value="蘋果汁 Apple Juice">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">蘋果汁 Apple Juice</div>
+                    <div class="item-desc">清爽蘋果汁</div>
+                </div>
+            </label>
+        </div>
+        <span class="skip-btn" data-skip="5">跳過此類別</span>
+        <div class="btn-group">
+            <button class="btn btn-back" data-back="4">← 上一步</button>
+        </div>
+    </div>
+
+    <!-- Step 6: 咖啡/茶（單選，自動跳頁） -->
+    <div class="step" data-step="6">
+        <h2 class="step-title">☕ 咖啡/茶 Coffee & Tea</h2>
+        <p class="step-subtitle">選擇你的咖啡或茶（點擊即選擇）</p>
+        <div class="menu-options" data-category="coffee" data-single="true" data-next-step="7">
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="Espresso 濃縮咖啡">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Espresso 濃縮咖啡</div>
@@ -610,15 +455,55 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Latte 拿鐵">
+                <input type="radio" name="coffee" value="Latte 拿鐵（全脂牛奶）">
                 <div class="checkbox"></div>
                 <div class="item-info">
-                    <div class="item-name">Latte / Cappuccino / Flat White</div>
-                    <div class="item-desc">可選冰/熱，可選全脂、脫脂或燕麥奶</div>
+                    <div class="item-name">Latte 拿鐵（全脂牛奶）</div>
+                    <div class="item-desc">濃縮咖啡配全脂牛奶</div>
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Masala Chai 印度香料奶茶">
+                <input type="radio" name="coffee" value="Latte 拿鐵（脫脂牛奶）">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">Latte 拿鐵（脫脂牛奶）</div>
+                    <div class="item-desc">濃縮咖啡配脫脂牛奶</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="Latte 拿鐵（燕麥奶）">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">Latte 拿鐵（燕麥奶）</div>
+                    <div class="item-desc">濃縮咖啡配燕麥奶</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="Cappuccino 卡布奇諾（全脂牛奶）">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">Cappuccino 卡布奇諾（全脂牛奶）</div>
+                    <div class="item-desc">濃縮咖啡配奶泡</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="Cappuccino 卡布奇諾（燕麥奶）">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">Cappuccino 卡布奇諾（燕麥奶）</div>
+                    <div class="item-desc">濃縮咖啡配燕麥奶泡</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="Flat White（全脂牛奶）">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">Flat White（全脂牛奶）</div>
+                    <div class="item-desc">濃縮咖啡配綿密奶泡</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="Masala Chai 印度香料奶茶">
                 <div class="checkbox"></div>
                 <div class="item-info">
                     <div class="item-name">Masala Chai 印度香料奶茶 <span class="item-tag">在地特色</span></div>
@@ -626,67 +511,91 @@
                 </div>
             </label>
             <label class="menu-item">
-                <input type="checkbox" value="Selection of Tea 精選茶">
+                <input type="radio" name="coffee" value="英式早餐茶 English Breakfast">
                 <div class="checkbox"></div>
                 <div class="item-info">
-                    <div class="item-name">Selection of Tea 精選茶</div>
-                    <div class="item-desc">英式早餐茶/伯爵茶/茉莉綠茶/洋甘菊/煎茶</div>
+                    <div class="item-name">英式早餐茶 English Breakfast</div>
+                    <div class="item-desc">經典紅茶</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="法式伯爵茶 Earl Grey">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">法式伯爵茶 Earl Grey</div>
+                    <div class="item-desc">佛手柑香紅茶</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="茉莉綠茶 Jasmine Green Tea">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">茉莉綠茶 Jasmine Green Tea</div>
+                    <div class="item-desc">清香茉莉綠茶</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="洋甘菊茶 Chamomile">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">洋甘菊茶 Chamomile</div>
+                    <div class="item-desc">放鬆舒緩花草茶</div>
+                </div>
+            </label>
+            <label class="menu-item">
+                <input type="radio" name="coffee" value="煎茶 Sencha">
+                <div class="checkbox"></div>
+                <div class="item-info">
+                    <div class="item-name">煎茶 Sencha</div>
+                    <div class="item-desc">日式綠茶</div>
                 </div>
             </label>
         </div>
-
-        <span class="skip-btn" data-skip="5">跳過此類別</span>
-
+        <span class="skip-btn" data-skip="6">跳過此類別</span>
         <div class="btn-group">
-            <button class="btn btn-back" data-back="4">← 上一步</button>
-            <button class="btn btn-next" data-next="6">確認訂單 →</button>
+            <button class="btn btn-back" data-back="5">← 上一步</button>
         </div>
     </div>
 
-    <!-- Step 6: 確認 -->
-    <div class="step" data-step="6">
+    <!-- Step 7: 確認 -->
+    <div class="step" data-step="7">
         <h2 class="step-title">📋 確認訂單</h2>
-
         <div class="summary-card">
             <div class="summary-identity">
                 <div class="emoji" id="summary-emoji">👤</div>
                 <div class="name" id="summary-name">-</div>
             </div>
-
             <div class="summary-section" id="summary-starters" style="display: none;">
                 <h4>🥐 開胃</h4>
                 <div class="summary-items"></div>
             </div>
-
             <div class="summary-section" id="summary-mains" style="display: none;">
                 <h4>🍳 主餐</h4>
                 <div class="summary-items"></div>
             </div>
-
             <div class="summary-section" id="summary-sides" style="display: none;">
                 <h4>🥓 配菜</h4>
                 <div class="summary-items"></div>
             </div>
-
-            <div class="summary-section" id="summary-drinks" style="display: none;">
-                <h4>🥤 飲料</h4>
+            <div class="summary-section" id="summary-juice" style="display: none;">
+                <h4>🧃 果汁</h4>
                 <div class="summary-items"></div>
             </div>
-
+            <div class="summary-section" id="summary-coffee" style="display: none;">
+                <h4>☕ 咖啡/茶</h4>
+                <div class="summary-items"></div>
+            </div>
             <p class="summary-note">✨ 飯店早餐已含在住宿中，不需額外付費！</p>
         </div>
-
         <div class="copy-area">
             <h4 style="margin-bottom: 10px;">📝 分享文字</h4>
             <div class="copy-text" id="copy-text"></div>
             <button class="btn btn-next btn-copy" id="btn-copy">📋 複製到剪貼簿</button>
         </div>
-
         <div class="btn-group" style="margin-top: 15px;">
-            <button class="btn btn-back" data-back="5">← 修改訂單</button>
+            <button class="btn btn-back" data-back="6">← 修改訂單</button>
             <button class="btn btn-next btn-restart" id="btn-restart">🔄 重新點餐</button>
         </div>
-
         <div class="back-link">
             <a href="index.html">← 返回行程總覽</a>
         </div>
@@ -701,7 +610,8 @@ let order = {
     starters: [],
     mains: [],
     sides: [],
-    drinks: []
+    juice: [],
+    coffee: []
 };
 
 // DOM 元素
@@ -714,7 +624,6 @@ const menuItems = document.querySelectorAll('.menu-item');
 function goToStep(stepNum) {
     steps.forEach(step => step.classList.remove('active'));
     document.querySelector(`.step[data-step="${stepNum}"]`).classList.add('active');
-
     progressDots.forEach((dot, index) => {
         dot.classList.remove('active');
         if (index + 1 < stepNum) {
@@ -726,25 +635,24 @@ function goToStep(stepNum) {
             dot.classList.add('active');
         }
     });
-
-    // 如果是確認頁面，生成摘要
-    if (stepNum === 6) {
+    if (stepNum === 7) {
         generateSummary();
     }
 }
 
-// 身分選擇
+// 身分選擇（點擊後直接跳下一頁）
 identityBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         identityBtns.forEach(b => b.classList.remove('selected'));
         btn.classList.add('selected');
         order.identity = btn.dataset.identity;
         order.emoji = btn.dataset.emoji;
-        document.getElementById('btn-step1').disabled = false;
+        // 自動跳下一頁
+        setTimeout(() => goToStep(2), 300);
     });
 });
 
-// 第一步下一步按鈕
+// 第一步下一步按鈕（備用）
 document.getElementById('btn-step1').addEventListener('click', () => {
     if (order.identity) {
         goToStep(2);
@@ -756,11 +664,11 @@ menuItems.forEach(item => {
     const input = item.querySelector('input');
     const isRadio = input.type === 'radio';
 
-    // 使用 change 事件避免重複觸發
     input.addEventListener('change', () => {
         const menuOptions = item.closest('.menu-options');
         const category = menuOptions.dataset.category;
         const value = input.value;
+        const nextStep = menuOptions.dataset.nextStep;
 
         if (isRadio) {
             // 單選：清除同組其他選項的 selected 狀態
@@ -768,8 +676,12 @@ menuItems.forEach(item => {
                 mi.classList.remove('selected');
             });
             item.classList.add('selected');
-            // 單選只存一個值
             order[category] = [value];
+
+            // 自動跳下一頁
+            if (nextStep) {
+                setTimeout(() => goToStep(parseInt(nextStep)), 300);
+            }
         } else {
             // 多選
             item.classList.toggle('selected', input.checked);
@@ -808,7 +720,7 @@ function generateSummary() {
     document.getElementById('summary-emoji').textContent = order.emoji;
     document.getElementById('summary-name').textContent = order.identity + ' 的早餐';
 
-    const categories = ['starters', 'mains', 'sides', 'drinks'];
+    const categories = ['starters', 'mains', 'sides', 'juice', 'coffee'];
 
     categories.forEach(cat => {
         const section = document.getElementById(`summary-${cat}`);
@@ -828,41 +740,25 @@ function generateSummary() {
         }
     });
 
-    // 生成複製文字
-    let copyText = `🍳 ${order.identity}的早餐訂單\n`;
-    copyText += `📍 The Serangoon House\n`;
-    copyText += `────────────────\n`;
+    // 生成複製文字（無空行）
+    let copyText = `🍳 ${order.identity}的早餐訂單\n📍 The Serangoon House\n────────────────`;
 
     if (order.starters.length > 0) {
-        copyText += `\n🥐 開胃：\n`;
-        order.starters.forEach(item => {
-            copyText += `   • ${item}\n`;
-        });
+        copyText += `\n🥐 開胃：${order.starters.join('、')}`;
     }
-
     if (order.mains.length > 0) {
-        copyText += `\n🍳 主餐：\n`;
-        order.mains.forEach(item => {
-            copyText += `   • ${item}\n`;
-        });
+        copyText += `\n🍳 主餐：${order.mains.join('、')}`;
     }
-
     if (order.sides.length > 0) {
-        copyText += `\n🥓 配菜：\n`;
-        order.sides.forEach(item => {
-            copyText += `   • ${item}\n`;
-        });
+        copyText += `\n🥓 配菜：${order.sides.join('、')}`;
     }
-
-    if (order.drinks.length > 0) {
-        copyText += `\n🥤 飲料：\n`;
-        order.drinks.forEach(item => {
-            copyText += `   • ${item}\n`;
-        });
+    if (order.juice.length > 0) {
+        copyText += `\n🧃 果汁：${order.juice.join('、')}`;
     }
-
-    copyText += `\n────────────────\n`;
-    copyText += `✨ 飯店早餐，開心享用！`;
+    if (order.coffee.length > 0) {
+        copyText += `\n☕ 咖啡/茶：${order.coffee.join('、')}`;
+    }
+    copyText += `\n────────────────\n✨ 飯店早餐，開心享用！`;
 
     document.getElementById('copy-text').textContent = copyText;
 }
@@ -871,28 +767,23 @@ function generateSummary() {
 document.getElementById('btn-copy').addEventListener('click', async () => {
     const text = document.getElementById('copy-text').textContent;
     const btn = document.getElementById('btn-copy');
-
     try {
         await navigator.clipboard.writeText(text);
         btn.textContent = '✅ 已複製！';
         btn.classList.add('copied');
-
         setTimeout(() => {
             btn.textContent = '📋 複製到剪貼簿';
             btn.classList.remove('copied');
         }, 2000);
     } catch (err) {
-        // Fallback for older browsers
         const textarea = document.createElement('textarea');
         textarea.value = text;
         document.body.appendChild(textarea);
         textarea.select();
         document.execCommand('copy');
         document.body.removeChild(textarea);
-
         btn.textContent = '✅ 已複製！';
         btn.classList.add('copied');
-
         setTimeout(() => {
             btn.textContent = '📋 複製到剪貼簿';
             btn.classList.remove('copied');
@@ -902,25 +793,21 @@ document.getElementById('btn-copy').addEventListener('click', async () => {
 
 // 重新點餐
 document.getElementById('btn-restart').addEventListener('click', () => {
-    // 重置訂單
     order = {
         identity: '',
         emoji: '',
         starters: [],
         mains: [],
         sides: [],
-        drinks: []
+        juice: [],
+        coffee: []
     };
-
-    // 重置 UI
     identityBtns.forEach(btn => btn.classList.remove('selected'));
     menuItems.forEach(item => {
         item.classList.remove('selected');
         item.querySelector('input').checked = false;
     });
     document.getElementById('btn-step1').disabled = true;
-
-    // 回到第一步
     goToStep(1);
 });
 </script>
