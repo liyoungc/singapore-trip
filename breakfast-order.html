@@ -729,9 +729,10 @@ document.getElementById('btn-step1').addEventListener('click', () => {
 
 // 菜單項目選擇
 menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        const checkbox = item.querySelector('input[type="checkbox"]');
-        checkbox.checked = !checkbox.checked;
+    const checkbox = item.querySelector('input[type="checkbox"]');
+
+    // 使用 change 事件避免重複觸發
+    checkbox.addEventListener('change', () => {
         item.classList.toggle('selected', checkbox.checked);
 
         // 更新訂單
